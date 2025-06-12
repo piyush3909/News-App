@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Reader - Stay Updated</title>
+    <link rel="stylesheet" href="news.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📰 News Reader</h1>
+            <p>Stay updated with the latest news from around the world</p>
+        </div>
+
+        <div class="controls">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search news..." id="searchInput">
+                <button class="search-btn" id="searchBtn">🔍</button>
+            </div>
+            <div class="category-buttons">
+                <button class="category-btn active" data-category="general">General</button>
+                <button class="category-btn" data-category="technology">Technology</button>
+                <button class="category-btn" data-category="business">Business</button>
+                <button class="category-btn" data-category="health">Health</button>
+                <button class="category-btn" data-category="science">Science</button>
+                <button class="category-btn" data-category="sports">Sports</button>
+                <button class="category-btn" data-category="entertainment">Entertainment</button>
+            </div>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            Loading latest news...
+        </div>
+
+        <div id="error" class="error-message" style="display: none;"></div>
+
+        <div id="newsContainer" class="news-grid"></div>
+
+        <div class="bookmarks-section">
+            <div class="bookmarks-header">
+                <h2>📚 Bookmarked Articles</h2>
+                <button id="clearBookmarks"
+                    style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 16px; border-radius: 15px; cursor: pointer;">Clear
+                    All</button>
+            </div>
+            <div id="bookmarksContainer" class="news-grid"></div>
+        </div>
+    </div>
+    <script src="config.js"></script>
+    <script src="news.js"></script>
+</body>
+</html>
